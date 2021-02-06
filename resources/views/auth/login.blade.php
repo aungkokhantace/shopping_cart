@@ -35,7 +35,7 @@
               <form class="pt-3" method="post" action="/login">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg {{$errors->has('email') ? 'is-invalid' :''}}" id="email" name="email" placeholder="Username">
+                  <input type="email" class="form-control form-control-lg {{$errors->has('email') ? 'is-invalid' :''}}" id="email" name="email" placeholder="Email">
                   <p class="text-danger">{{$errors->first('email')}}</p>
                 </div>
                 <div class=" form-group">
