@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>FOSTA Admin</title>
+    <title>SHOPPING CART</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="template/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="template/vendors/base/vendor.bundle.base.css">
@@ -29,12 +29,14 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
-                                <img src="images/fosta-logo.png" alt="logo">
+                                <h3>Register New Customer</h3>
+
                             </div>
-                            <h4>New here?</h4>
-                            <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
                             <form class="pt-3" method="POST" action="/register">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                                <!-- role_id = 2 for customers -->
+                                <input type="hidden" name="role" value="2">
 
                                 <!-- start name -->
                                 <div class="form-group">
@@ -62,19 +64,6 @@
                                     <input type="password" class="form-control form-control-lg" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password">
                                 </div>
                                 <!-- end password confirmation -->
-
-                                <!-- start role select -->
-                                <div class="form-group">
-                                    <select class="form-control form-control-lg select-left-padding {{$errors->has('password') ? 'is-invalid' :''}}" id="role" name="role">
-                                        <!-- default -->
-                                        <option selected disabled>Select User Role</option>
-                                        @foreach($roles as $role)
-                                        <option value="{{$role->id}}">{{$role->name}}</option>
-                                        @endforeach
-                                    </select>
-                                    <p class="text-danger">{{$errors->first('role')}}</p>
-                                </div>
-                                <!-- end role select -->
 
                                 <!-- start buttons -->
                                 <div class="mt-3">

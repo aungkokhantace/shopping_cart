@@ -13,15 +13,29 @@
 
 Route::auth();
 
+// Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth', 'role-permission']], function () {
-    // Route::group(['middleware' => ['auth']], function () {
     /* all routes in this route group require auth */
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/', 'Frontend\ItemController@index')->name('frontend.items.index');
+    Route::get('/frontend/items', 'Frontend\ItemController@index')->name('frontend.items.index');
 
-    Route::get('/roles/{role}/edit_permissions', 'RoleController@editPermissions')->name('role.edit_permissions');
-    Route::post('/roles/{role}/update_permissions', 'RoleController@updatePermissions')->name('role.update_permissions');
-    Route::resource('roles', 'RoleController');
+    // start cart routes
+    Route::get('/view_cart', 'Frontend\ItemController@viewCart')->name('cart.view');
+    Route::get('/add_to_cart/{id}', 'Frontend\ItemController@addToCart')->name('cart.add');
+    Route::put('/update_cart', 'Frontend\ItemController@updateCart')->name('cart.update');
+    Route::delete('/remove_from_cart', 'Frontend\ItemController@removeFromCart')->name('cart.remove');
+    Route::post('/checkout', 'Frontend\ItemController@checkout')->name('cart.checkout');
+    // end cart routes
 
-    Route::resource('permissions', 'PermissionController');
+    Route::get('/view_transactions', 'Frontend\TransactionController@index')->name('frontend.transactions.list');
+    Route::get('/view_transactions/detail/{id}', 'Frontend\TransactionController@show')->name('frontend.transactions.detail');
+    // end frontend routes
+
+    // start backend routes
+    Route::resource('items', 'ItemController');
+    Route::resource('customers', 'CustomerController');
+
+    Route::get('/transactions', 'TransactionController@index')->name('transactions.list');
+    Route::get('/transactions/detail/{id}', 'TransactionController@show')->name('transactions.detail');
+    // end backend routes
 });

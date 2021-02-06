@@ -31,6 +31,35 @@ class PermissionSeeder extends Seeder
             ['id' => '24', 'module' => 'Permission', 'action' => 'Edit', 'description' => 'Display edit form', 'route_name' => 'permissions.edit', 'method' => 'get'],
             ['id' => '25', 'module' => 'Permission', 'action' => 'Update', 'description' => 'Update permission', 'route_name' => 'permissions.update', 'method' => 'put'],
             ['id' => '26', 'module' => 'Permission', 'action' => 'Delete', 'description' => 'Delete permission', 'route_name' => 'permissions.destroy', 'method' => 'delete'],
+
+            ['id' => '31', 'module' => 'Items', 'action' => 'List', 'description' => 'Display item list', 'route_name' => 'items.index', 'method' => 'get'],
+            ['id' => '32', 'module' => 'Items', 'action' => 'Create', 'description' => 'Display entry form', 'route_name' => 'items.create', 'method' => 'get'],
+            ['id' => '33', 'module' => 'Items', 'action' => 'Store', 'description' => 'Store a new item', 'route_name' => 'items.store', 'method' => 'post'],
+            ['id' => '34', 'module' => 'Items', 'action' => 'Edit', 'description' => 'Display edit form', 'route_name' => 'items.edit', 'method' => 'get'],
+            ['id' => '35', 'module' => 'Items', 'action' => 'Update', 'description' => 'Update item', 'route_name' => 'items.update', 'method' => 'put'],
+            ['id' => '36', 'module' => 'Items', 'action' => 'Delete', 'description' => 'Delete item', 'route_name' => 'items.destroy', 'method' => 'delete'],
+
+            ['id' => '41', 'module' => 'Frontend Items', 'action' => 'List', 'description' => 'Display item list', 'route_name' => 'frontend.items.index', 'method' => 'get'],
+            ['id' => '42', 'module' => 'Frontend Items', 'action' => 'Detail', 'description' => 'Display item detail', 'route_name' => 'frontend.items.detail', 'method' => 'get'],
+            ['id' => '43', 'module' => 'Frontend Items', 'action' => 'Add to cart', 'description' => 'Add to cart', 'route_name' => 'frontend.items.add_to_cart', 'method' => 'post'],
+
+            ['id' => '51', 'module' => 'Customers', 'action' => 'List', 'description' => 'Display Customer list', 'route_name' => 'customers.index', 'method' => 'get'],
+            ['id' => '52', 'module' => 'Customers', 'action' => 'View', 'description' => 'View Customer Detail', 'route_name' => 'customers.show', 'method' => 'get'],
+
+            ['id' => '61', 'module' => 'Cart', 'action' => 'View Cart', 'description' => 'View Cart', 'route_name' => 'cart.view', 'method' => 'get'],
+            ['id' => '62', 'module' => 'Cart', 'action' => 'Add to Cart', 'description' => 'Add to Cart', 'route_name' => 'cart.add', 'method' => 'get'],
+            ['id' => '63', 'module' => 'Cart', 'action' => 'Update Cart', 'description' => 'Update Cart', 'route_name' => 'cart.update', 'method' => 'put'],
+            ['id' => '64', 'module' => 'Cart', 'action' => 'Remove from Cart', 'description' => 'Remove from Cart', 'route_name' => 'cart.remove', 'method' => 'delete'],
+
+            ['id' => '65', 'module' => 'Cart', 'action' => 'Checkout', 'description' => 'Checkout', 'route_name' => 'cart.checkout', 'method' => 'post'],
+
+            ['id' => '70', 'module' => 'Frontend Transactions', 'action' => 'List', 'description' => 'View Transaction List', 'route_name' => 'frontend.transactions.list', 'method' => 'get'],
+            ['id' => '71', 'module' => 'Frontend Transactions', 'action' => 'Detail', 'description' => 'View Transaction Detail', 'route_name' => 'frontend.transactions.detail', 'method' => 'get'],
+
+            ['id' => '80', 'module' => 'Transactions', 'action' => 'List', 'description' => 'View Transaction List', 'route_name' => 'transactions.list', 'method' => 'get'],
+            ['id' => '81', 'module' => 'Transactions', 'action' => 'Detail', 'description' => 'View Transaction Detail', 'route_name' => 'transactions.detail', 'method' => 'get'],
+
+
         );
 
         if (isset($existingPermissions) && count($existingPermissions) > 0) {
@@ -60,11 +89,11 @@ class PermissionSeeder extends Seeder
         }
 
         echo "\n";
-        echo "**********************************************";
+        echo "****************************************";
         echo "\n";
         echo "** Finished Running Permission Seeder **";
         echo "\n";
-        echo "**********************************************";
+        echo "****************************************";
         echo "\n";
     }
 }

@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>FOSTA Admin</title>
+  <title>SHOPPING CART</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="template/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="template/vendors/base/vendor.bundle.base.css">
@@ -30,7 +30,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="images/fosta-logo.png" alt="logo">
+                <h3>Login</h3>
               </div>
               <form class="pt-3" method="post" action="/login">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -43,7 +43,7 @@
                   <p class="text-danger">{{$errors->first('password')}}</p>
                 </div>
                 <div class="mt-3">
-                  <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN">
+                  <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="LOG IN">
                 </div>
                 <!-- <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
@@ -55,7 +55,7 @@
                   <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div> -->
                 <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="/register" class="text-primary">Create</a>
+                  Don't have an account? <a href="/register" class="text-primary">Register New Customer</a>
                 </div>
               </form>
             </div>

@@ -9,14 +9,14 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/customers">
+            <a class="nav-link" href="#">
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               <span class="menu-title">Customers</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/transactions">
+            <a class="nav-link" href="#">
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               <span class="menu-title">Transactions</span>
             </a>

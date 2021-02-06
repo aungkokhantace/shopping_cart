@@ -51,23 +51,24 @@
 
 <script>
   $(document).ready(function() {
-        // for flash alert to disapper automatically after timeout
-        setTimeout(function() {
-          $('.alert').fadeOut();
-        }, 2000);
+    // for flash alert to disapper automatically after timeout
+    setTimeout(function() {
+      $('.alert').fadeOut();
+    }, 2000);
 
-        $('.list-view-table').DataTable({
-          // display datatable only after loading is complete 
-          // (to prevent table is flashing on pageload issue)
-          "initComplete": function() {
-            $(".list-view-table").show();
-          }
-        });
+    $('.list-view-table').DataTable({
+      // display datatable only after loading is complete 
+      // (to prevent table is flashing on pageload issue)
+      "initComplete": function() {
+        $(".list-view-table").show();
+      }
+    });
 
-        /* for tooltips */
-        $(function() {
-          $('[data-toggle="tooltip"]').tooltip()
-        });
+    /* for tooltips */
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  });
 </script>
 
 </body>

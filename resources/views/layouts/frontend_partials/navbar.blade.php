@@ -3,7 +3,7 @@
   <div class="navbar-brand-wrapper d-flex justify-content-center">
     <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
       <!-- <a class="navbar-brand brand-logo" href="/items"><img src="/images/fosta-logo.png" alt="logo" /></a> -->
-      <a class="navbar-brand brand-logo" href="#">Admin View</a>
+      <a class="navbar-brand brand-logo" href="#">Customer View</a>
       <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/template/images/logo-mini.svg" alt="logo" /></a>
       <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
         <span class="mdi mdi-sort-variant"></span>
@@ -32,6 +32,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
           <!-- start logout -->
+          <a class="dropdown-item" href="/view_transactions">View Transactions</a>
           <a class="dropdown-item" href="/logout">Logout</a>
           <!-- end logout -->
         </div>

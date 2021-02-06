@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RoleSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,12 +11,12 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('roles')->truncate();
+        DB::table('users')->truncate();
 
         $records = array(
-            ['id' => 1, 'name' => 'Admin', 'email' => 'admin@gmail.com', 'password' => ''],
+            ['id' => 1, 'name' => 'Admin', 'role_id' => 1, 'email' => 'admin@gmail.com', 'password' => bcrypt('admin@123')]
         );
 
-        DB::table('roles')->insert($records);
+        DB::table('users')->insert($records);
     }
 }

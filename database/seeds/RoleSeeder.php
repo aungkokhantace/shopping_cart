@@ -15,6 +15,7 @@ class RoleSeeder extends Seeder
 
         $records = array(
             ['id' => 1, 'name' => 'Admin', 'description' => 'Admin role can access all programs'],
+            ['id' => 2, 'name' => 'Customer', 'description' => 'Customer role can access frontend programs'],
         );
 
         DB::table('roles')->insert($records);

@@ -1,3 +1,11 @@
 .select-left-padding {
     padding-left: 30px !important;
 }
+
+.required_field {
+    color: red;
+}
+
+.main-panel-without-sidebar {
+    width: 100%;
+}
