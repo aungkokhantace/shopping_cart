@@ -95,16 +95,36 @@ class ItemController extends Controller
             session()->flash('success', 'Cart updated successfully');
         }
     }
-    public function removeFromCart(Request $request)
+
+    // public function removeFromCart(Request $request)
+    // {
+
+    //     if ($request->id) {
+    //         $cart = session()->get('cart');
+    //         if (isset($cart[$request->id])) {
+    //             unset($cart[$request->id]);
+    //             session()->put('cart', $cart);
+    //         }
+    //         session()->flash('success', 'Product removed successfully');
+    //     }
+    // }
+
+    public function removeFromCart($id)
     {
-        if ($request->id) {
-            $cart = session()->get('cart');
-            if (isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Product removed successfully');
+
+        $item = Item::find($id);
+
+        if (!$item) {
+            abort(404);
         }
+
+        $cart = session()->get('cart');
+
+        if (isset($cart[$id])) {
+            unset($cart[$id]);
+            session()->put('cart', $cart);
+        }
+        return redirect()->back()->with('success', 'Item added to cart successfully!');
     }
 
     public function checkout(Request $request)

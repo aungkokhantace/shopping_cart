@@ -49,7 +49,8 @@ class PermissionSeeder extends Seeder
             ['id' => '61', 'module' => 'Cart', 'action' => 'View Cart', 'description' => 'View Cart', 'route_name' => 'cart.view', 'method' => 'get'],
             ['id' => '62', 'module' => 'Cart', 'action' => 'Add to Cart', 'description' => 'Add to Cart', 'route_name' => 'cart.add', 'method' => 'get'],
             ['id' => '63', 'module' => 'Cart', 'action' => 'Update Cart', 'description' => 'Update Cart', 'route_name' => 'cart.update', 'method' => 'put'],
-            ['id' => '64', 'module' => 'Cart', 'action' => 'Remove from Cart', 'description' => 'Remove from Cart', 'route_name' => 'cart.remove', 'method' => 'delete'],
+            ['id' => '64', 'module' => 'Cart', 'action' => 'Remove from Cart', 'description' => 'Remove from Cart', 'route_name' => 'cart.remove', 'method' => 'get'],
+            // ['id' => '64', 'module' => 'Cart', 'action' => 'Remove from Cart', 'description' => 'Remove from Cart', 'route_name' => 'cart.remove', 'method' => 'delete'],
 
             ['id' => '65', 'module' => 'Cart', 'action' => 'Checkout', 'description' => 'Checkout', 'route_name' => 'cart.checkout', 'method' => 'post'],
 

@@ -22,8 +22,7 @@ Route::group(['middleware' => ['auth', 'role-permission']], function () {
     // start cart routes
     Route::get('/view_cart', 'Frontend\ItemController@viewCart')->name('cart.view');
     Route::get('/add_to_cart/{id}', 'Frontend\ItemController@addToCart')->name('cart.add');
-    Route::put('/update_cart', 'Frontend\ItemController@updateCart')->name('cart.update');
-    Route::delete('/remove_from_cart', 'Frontend\ItemController@removeFromCart')->name('cart.remove');
+    Route::get('/remove_from_cart/{id}', 'Frontend\ItemController@removeFromCart')->name('cart.remove');
     Route::post('/checkout', 'Frontend\ItemController@checkout')->name('cart.checkout');
     // end cart routes
 

@@ -49,7 +49,7 @@
                                         <td>${{ number_format($item->price, 2, '.', '') }}</td>
                                         <td>
                                             <div class="btn-group float-right" role="group">
-                                                <a href="/add_to_cart/{{$item->id}}"><button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Add to cart">Add to cart</button></a>
+                                                <a href="/add_to_cart/{{$item->id}}"><button type="button" class="btn btn-secondary">Add to cart</button></a>
                                             </div>
                                         </td>
                                     </tr>

@@ -81,6 +81,15 @@
                 }
             });
             //End Validation for Entry and Edit Form
+
+
+            // to add prefix to sample id
+            $("#name").keydown(function(e) {
+                console.log($(this).val());
+                var oldvalue = $(this).val();
+                console.log(oldvalue);
+
+            });
         });
     </script>
     @endsection

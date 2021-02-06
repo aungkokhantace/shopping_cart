@@ -34,7 +34,7 @@
 
                                             <!-- start name field -->
                                             <div class="form-group">
-                                                <label for="name">Name<span class="required_field">*</span></label>
+                                                <label for="name">Name</label>
                                                 <input type="text" readonly class="form-control {{$errors->has('name') ? 'is-invalid' :''}}" id="name" name="name" autofocus="autofocus" placeholder="Enter customer name" value="{{ isset($customer)? $customer->name : old('name') }}">
                                                 <!-- validation error message -->
                                                 <p class="text-danger">{{$errors->first('name')}}</p>
@@ -43,7 +43,7 @@
 
                                             <!-- start email field -->
                                             <div class="form-group">
-                                                <label for="name">Email<span class="required_field">*</span></label>
+                                                <label for="name">Email</label>
                                                 <input type="text" readonly class="form-control {{$errors->has('price') ? 'is-invalid' :''}}" id="email" name="email" placeholder="Enter email" value="{{ isset($customer)? $customer->email : old('email') }}">
                                                 <!-- validation error message -->
                                                 <p class="text-danger">{{$errors->first('email')}}</p>
